@@ -11,7 +11,7 @@ def get_recommendations(project_description, openai_api_key):
                 'delimiter': ','})
     data = loader.load()
 
-    embedding_function = OpenAIEmbeddings()
+    embedding_function = OpenAIEmbeddings(openai_api_key=openai_api_key)
 
 
     # Building a Vector DB For The Documents
