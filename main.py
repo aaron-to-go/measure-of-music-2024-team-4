@@ -4,7 +4,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.chains import RetrievalQA 
 from langchain.document_loaders.csv_loader import CSVLoader
 
-def get_recommendations(project_description):
+def get_recommendations(project_description, openai_api_key):
 
     # Load the music data csv
     loader = CSVLoader(file_path="data.csv", encoding="utf-8", csv_args={
@@ -18,7 +18,7 @@ def get_recommendations(project_description):
     vectordb = Chroma.from_documents(data, embedding_function)
 
     # Initializing the ChatGPT Model.
-    llm = ChatOpenAI(temperature=0.3)
+    llm = ChatOpenAI(temperature=0.3, openai_api_key=openai_api_key)
 
     # Creating a RetrivalIQA model combining the langauge model and vector database. 
     recommendation_qa = RetrievalQA.from_chain_type(
