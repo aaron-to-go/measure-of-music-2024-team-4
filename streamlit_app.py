@@ -37,4 +37,4 @@ with st.form('my_form'):
     submitted = st.form_submit_button('Submit')
 
     if submitted:
-        get_recommendations(project_description,openai_api_key)
+        generate_response(project_description,openai_api_key)

@@ -3,6 +3,7 @@ from langchain.vectorstores import Chroma
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import RetrievalQA 
 from langchain.document_loaders.csv_loader import CSVLoader
+import os
 
 def get_recommendations(project_description, openai_api_key):
 
@@ -11,10 +12,8 @@ def get_recommendations(project_description, openai_api_key):
                 'delimiter': ','})
     data = loader.load()
 
-    embedding_function = OpenAIEmbeddings(openai_api_key=openai_api_key)
-
-
     # Building a Vector DB For The Documents
+    embedding_function = OpenAIEmbeddings(openai_api_key=openai_api_key)
     vectordb = Chroma.from_documents(data, embedding_function)
 
     # Initializing the ChatGPT Model.
