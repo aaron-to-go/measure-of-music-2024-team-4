@@ -14,13 +14,12 @@ st.set_page_config(
 )
 
 # Setting Up The Application Landing Page
+st.title('BrandBeats :musical_note:')
 st.markdown("""
-# BrandBeats :musical_note:
-
-###### Find the perfect track for your synch opportunity! 
+### Find the perfect track for your synch opportunity! 
 1. To get started, please provide a detailed description of your project
 1. If you have any complimentary images, that describe your project or feeling that you are looking for, you can upload them as well
-3. When ready click the "Submit" button search for recommendations from your catalogue
+3. When ready, click the __Search__ button to get recommendations 
 
 """)
 
@@ -37,7 +36,7 @@ with st.form('my_form'):
 
     images = st.file_uploader("Upload images", type=["jpg", "png"], accept_multiple_files=True)
 
-    submitted = st.form_submit_button('Submit')
+    submitted = st.form_submit_button('Search')
 
     if submitted:
         generate_response(project_description)
