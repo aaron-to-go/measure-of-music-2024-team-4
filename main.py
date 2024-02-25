@@ -27,17 +27,22 @@ def get_recommendations(project_description, openai_api_key):
     )
 
     # Defining the Query. 
-    query = """Objective: You are to function as a music supervisor for commercials. Your primary role is to recommend a fitting song from the database based on the project description of a commercial provided.
+    query = """
+    Objective: You are a music supervisor. You will receive a project description containing information about a commercial or video that the user needs music for.
+    Your primary role is to recommend a fitting song from the context based on the provided project description.
 Tasks:
-1. Analyze the Description: Understand all aspects of the commercial based on the description. Think of the mood, key visuals, theme, target audience, and any specific thematic elements or narrative details. Note any specific requests or elements that the song must complement or enhance.
-2. Song Selection: Based on the analysis, choose a song from the provided database that best fits the commercials requirements. Consider the songs tempo, genre, lyrics (if applicable), and overall vibe to ensure it matches the commercials mood and objectives.
-3. Justification: Provide a brief explanation for your song choice. Explain how the songs characteristics align with the commercials theme, mood, and target audience.
-4. Alternative Options: Optionally, you may suggest up to two alternative songs from the database that could also fit the commercial. Briefly describe why these alternatives were considered and how they differ from your primary choice.
+1. Analyze the Description: Understand all aspects of the project based on the description. Think of the mood, key visuals, theme, target audience, duration and any specific thematic elements or narrative details. Note any specific requests or elements that the song must complement or enhance.
+2. Song Selection: Based on the analysis, choose a song from the provided database that best fits the requirements. Consider tall aspects of the song that you have available, and overall vibe to ensure it matches the projects mood and objectives.
+3. Justification: Provide a brief explanation for your song choice. Explain how the songs characteristics align with the project theme, mood, and target audience.
+4. Spotify_Streams and popularity score to give a potential indication of price.
+5. Suggest 3 songs in total using the instructions above.
+6. Finally, give the user Feedback on what information could be needed to give better results
 Guidelines:
-Ensure your recommendations are based on the description provided and relevant to the commercials goals.
-The song must be from the database.
-Maintain a professional and informative tone throughout your response.
-List the recommendations descending and use the song title and artist as the title.
+- Ensure your recommendations are based on the description provided and relevant to the projects goals.
+- The recommended songs must be from the context.
+- Maintain a professional and informative tone throughout your response.
+- Every suggestion you make, should contain the following information: 1.track name 2.artist 3.spotify_track_link as hyperlink 4.justification 5. spotify-streams and price indication.
+- Format it in a nice and clear way
 Project description: """ + project_description
     
     # Executing the RetreivalIQA model with the defined query. 
