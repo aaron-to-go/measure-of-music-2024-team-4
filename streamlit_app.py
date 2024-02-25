@@ -18,7 +18,7 @@ st.title('BrandBeats :musical_note:')
 st.markdown("""
 ### Find the perfect track for your sync opportunity! 
 1. To get started, please provide a detailed description of your project
-1. If you have any complimentary images, that describe your project or feeling that you are looking for, you can upload them as well
+2. (experimental 🧪) If you have any complimentary images, that describe your project or feeling that you are looking for, you can upload them as well
 3. When ready, click the __Search__ button to get recommendations 
 
 """)
