@@ -9,23 +9,26 @@ openai_api_key = os.environ.get("OPENAI_API_KEY")
 st.set_page_config(
     page_title='BrandBeats',
     page_icon='🎧',
-    layout='wide',
+    layout='centered',
     initial_sidebar_state='collapsed',
 )
 
 # Setting Up The Application Landing Page
 st.markdown("""
-# BrandBeats
+# BrandBeats :musical_note:
 
 ###### Find the perfect track for your synch opportunity! 
-###### To get started, please provide a detailed project description and upload any relevant images, like mood boards that describe the feeling you're looking for.
-###### When ready click the "Submit" button search for recommendations from your catalogue. 
+1. To get started, please provide a detailed description of your project
+1. If you have any complimentary images, that describe your project or feeling that you are looking for, you can upload them as well
+3. When ready click the "Submit" button search for recommendations from your catalogue
+
 """)
 
 def generate_response(project_description):
     # Use st.spinner to show a loading spinner while the model is working
-    with st.spinner("Searching catalogue..."):
+    with st.spinner("🤖 Searching catalogue..."):
         output = get_recommendations(project_description, openai_api_key)
+        st.markdown("### Recommendations:")
         st.write(output)
 
 with st.form('my_form'):
@@ -38,3 +41,9 @@ with st.form('my_form'):
 
     if submitted:
         generate_response(project_description)
+        
+st.markdown("""
+            Hacked with :heart: by Team 4 at the Measure of Music Hackathon 2024
+            
+            Ursola Noël | Aaron Dutschmann | Timalka Kalubowila | Osaruyi Enofe | Stephanie Gnahore
+            """)
