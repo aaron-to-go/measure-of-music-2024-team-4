@@ -9,7 +9,7 @@ def get_recommendations(project_description, openai_api_key):
 
     # Load the music data csv
     loader = CSVLoader(file_path="data.csv", encoding="utf-8", csv_args={
-                'delimiter': ','})
+                'delimiter': ';'})
     data = loader.load()
 
     # Building a Vector DB For The Documents
