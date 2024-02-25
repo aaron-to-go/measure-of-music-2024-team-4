@@ -1,10 +1,8 @@
 import os
-import dotenv
 import streamlit as st
 from main import get_recommendations
 
 # Retrieve the OpenAI API key from the environment variable
-dotenv.load_dotenv()
 openai_api_key = os.environ.get("OPENAI_API_KEY")
 
 # Setting Up Some Configuration Settings
@@ -27,7 +25,7 @@ st.markdown("""
 def generate_response(project_description):
     # Use st.spinner to show a loading spinner while the model is working
     with st.spinner("Searching catalogue..."):
-        output = get_recommendations(project_description)
+        output = get_recommendations(project_description, openai_api_key)
         st.write(output)
 
 with st.form('my_form'):
@@ -39,4 +37,4 @@ with st.form('my_form'):
     submitted = st.form_submit_button('Submit')
 
     if submitted:
-        get_recommendations(project_description)
+        get_recommendations(project_description,openai_api_key)
