@@ -1,6 +1,11 @@
-Track Name ,Artist Name,Genre,Mood,Tempo,Loudness,Duration,Spotify Streams,Spotify Track ID,Chartmetric Track ID,Popularity
-Glance Out A Casement Window,Janet Redger,,Calm,62.479,-31.119,130.1659,44917517,5hFkGfx038V0LhqI0Uff2J,117884554,76
+Track Name ,Artist Name,Genre,Mood,Tempo,Loudness,Duration (seconds),Spotify Streams,Spotify Track ID,Chartmetric Track ID,Popularity
+Glance Out A Casement Window,Janet Redger,background piano,Calm,62.479,-31.119,130.1659,44917517,5hFkGfx038V0LhqI0Uff2J,117884554,76
 Lil Boo Thang,Paul Russell,"christian hip hop,christian trap",Energetic ,114.481,-3.292,114.23383,156769890,0cVyQfDyRnMJ0V3rjjdlU3,129305596,89
 Good Days,SZA,"hip hop,pop,pop rap,rap",Good Vibes,121.002,-8.37,279.20398,988383063,3YJJjQPAbDT7mGpX3WtQ9A,24570430,83
-Somnisonic,Broken Peak,,Sleep,71.342,-35.352,142.5,3700326,5AQQYMkVL7216ZVuPytjwL,134918142,73
+Somnisonic,Broken Peak,ambient,Sleep,71.342,-35.352,142.5,3700326,5AQQYMkVL7216ZVuPytjwL,134918142,73
 Cruel Summer,Taylor Swift,Pop,Motivation ,169.994,-5.707,178.42667,1773153191,1BxfuPKGuaTgP7aM0Bbdwr,13751644,99
+Murder On The Dancefloor,Sophie Ellis-Bextor,"australian pop,bubblegum dance,dance pop,disco house,europop,new wave pop,pop rock,vocal house",Happy,117.308,-5.281,230.01334,382963856,4tKGFmENO69tZR9ahgZu48,2439158,94
+Next Life (feat. Dustin Tebbutt),"Nils Hoffmann, Dustin Tebbutt","australian indie,chamber pop,folk-pop,indie anthem-folk,indie folk,deep euro house,deep minimal techno",Chill ,124.017,-7.907,292.15674,448028,0i5P9W2tN89iBojs7KQ0PD,135736672,59
+Flowers,Miley Cyrus,"dance pop,pop,post-teen pop",Young,118.048,-4.775,200.6,1803729700,7DSAEUvxU8FajXtRloy8M0,129597237,95
+Restfulness,Zion Llama,ambient,Meditation,71.632,-34.604,175.79211,17574762,1eWEJ1JVoyt0nozyAoUPZW,91509958,65
+"What Was I Made For? [From The Motion Picture ""Barbie""]",Billie Eilish,"electropop,pop",Sad,79.449,-17.843,222.36957,675545567,6wf7Yu7cxBSPrRlWeSeK0Q,128005530,95
